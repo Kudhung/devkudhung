@@ -1,1 +1,0 @@
-console.log(Buffer.from('Hello World!').toString('base64'));
