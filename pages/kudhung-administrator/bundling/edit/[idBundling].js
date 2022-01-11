@@ -75,13 +75,13 @@ const Form = (props) => {
                         </div>
                         <div className="u-clearfix u-form-spacing-10 u-form-horizontal u-inner-form " style={{ marginTop: "2%", marginLeft: "0%", marginRight: "-1%" }}>
                             <div style={{ marginTop: "3%" }} className="u-form-group u-form-select u-form-group-8" style={{ width: "100%" }}>
-                                <div className=" u-white " style={{ marginRight: "1%", width:"50%" }}>
+                                <div className=" u-white " style={{ marginRight: "1%", width: "50%" }}>
                                     <label htmlFor="text-c8ee" className="u-label"><b>Gambar Bundling</b></label>
                                     <label htmlFor="text-c908" className="u-label" style={{ float: "left", marginLeft: "3%", marginTop: "10%" }} >Keterangan Gambar
                                     </label>
-                                    <br/>
                                     <br />
-                                    <br/>
+                                    <br />
+                                    <br />
                                     <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "3%", marginTop: "-4%" }}>
                                         {errors.keteranganGambar1?.type === 'required' && "(Keterangan Gambar Kosong)"}
                                     </p>
@@ -105,18 +105,18 @@ const Form = (props) => {
                                         onChange={props.handleFileInputChange}
                                         className="  u-input-rectangle custom-file-input"
                                     />
-                                    <img src={props.gambar1Bundling} className="gambar-gambar"/>
+                                    <img src={props.gambar1Bundling} className="gambar-gambar" />
                                     <i className="fas fa-angle-double-right double-panah" ></i>
-                                    <img src={props.gmbrstring1} className="gambar-gambar2" />  
+                                    <img src={props.gmbrstring1} className="gambar-gambar2" />
                                 </div>
-                                <div className=" u-white " style={{ marginLeft: "1%", width:"50%" }}>
+                                <div className=" u-white " style={{ marginLeft: "1%", width: "50%" }}>
                                     <label htmlFor="text-c8ee" className="u-label"><b>Gambar Bundling</b></label>
                                     <label htmlFor="text-c908" className="u-label" style={{ float: "left", marginLeft: "3%", marginTop: "10%" }} >Keterangan Gambar
                                     </label>
-                                    <br/>
                                     <br />
                                     <br />
-                                    <p  style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "3%", marginTop: "-4%" }}>
+                                    <br />
+                                    <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "3%", marginTop: "-4%" }}>
                                         {errors.keteranganGambar2?.type === 'required' && "(Keterangan Gambar Kosong)"}
                                     </p>
                                     <input
@@ -140,7 +140,7 @@ const Form = (props) => {
                                         onChange={props.handleFileInputChange2}
                                         className=" u-input-rectangle custom-file-input"
                                     />
-                                    <img src={props.gambar2Bundling} className="gambar-gambar"/>
+                                    <img src={props.gambar2Bundling} className="gambar-gambar" />
                                     <i className="fas fa-angle-double-right double-panah" ></i>
                                     <img src={props.gmbrstring2} className="gambar-gambar2" />
                                 </div>
@@ -179,9 +179,9 @@ const EditBundling = (props) => {
     const [hargaBundling, setHargaBundling] = useState(props.hargaBundling)
     const [deskripsiBundling, setDeskripsiBundling] = useState(props.DeskripsiBundling)
     const [base64URL1, setBase641] = useState([])
-    const [gmbrstring1, setGmbrString1] = useState(props.gambar1Bundling)
+    const [gmbrstring1, setGmbrString1] = useState()
     const [base64URL2, setBase642] = useState([])
-    const [gmbrstring2, setGmbrString2] = useState(props.gambar2Bundling)
+    const [gmbrstring2, setGmbrString2] = useState()
     // const file = null
 
     const getBase64 = (file) => {

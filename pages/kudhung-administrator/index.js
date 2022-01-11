@@ -2,6 +2,7 @@ import Link from 'next/link'
 import prisma from '../../client.ts'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
+import Script from "next/script";
 
 export async function getServerSideProps(context) {
   const daftarKategori = await prisma.kategori.findMany();
@@ -150,6 +151,8 @@ const AdminHome = (props) => {
   return (
     <>
       <div className="u-body">
+    <Script className="u-script" type="text/javascript" src="/js/jquery.js"></Script>
+    <Script className="u-script" type="text/javascript" src="/js/nicepage.js" ></Script>
         <link rel="stylesheet" href="/css/Admin.css" media="screen" />
         <header className="u-align-center u-clearfix u-header u-header" id="sec-dce1"><div className="u-clearfix u-sheet u-sheet-1">
           <a href="Beranda.html" data-page-id="488405423" className="u-align-center u-image u-logo u-image-1" data-image-width="500" data-image-height="500" title="Beranda">
