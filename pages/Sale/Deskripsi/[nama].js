@@ -60,7 +60,7 @@ const DeskripsiProduk = (props) => {
     
     const Pesan = () => {
         /* Whatsapp Window Open */ 
-            window.open('https://web.whatsapp.com/send' + '?phone=' + '6283857247099' + '&text=' + 'Halo saya ingin memesan' + '%20' + namaProd + '%20' + '(' + '%20' + '~' + hargaProd + '~' + '%20' + '*' + hargaSale + '*' + '%20' + ')' + '%0A%0A' +
+            window.open('https://wa.me/send' + '?phone=' + '6283857247099' + '&text=' + 'Halo saya ingin memesan' + '%20' + namaProd + '%20' + '(' + '%20' + '~' + hargaProd + '~' + '%20' + '*' + hargaSale + '*' + '%20' + ')' + '%0A%0A' +
                 '*' + 'Isi Form Penerima' + '*' + '%0A' +
                 '*Name : ' + '%0A' +
                 '*No Telp : ' + '%0A' +
@@ -144,7 +144,7 @@ const DeskripsiProduk = (props) => {
                                                 {props.hargaSale}
                                             </div>
                                         </div>
-                                        <div className="u-price " style={{ textDecoration: "line-through !important" }}>
+                                        <div className="u-price " style={{ textDecoration: "line-through " }}>
                                             {props.hargaProduk}
                                         </div>
                                     </div>

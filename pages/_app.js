@@ -13,8 +13,6 @@ function MyApp({ Component, pageProps }) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
         <link rel="stylesheet" href="/css/nicepage.css" media="screen" />
         <link rel="stylesheet" href="/css/Post-Template.css" media="screen" />
-        {/* <script className="u-script" type="text/javascript" src="/js/jquery.js"></script>
-        <script className="u-script" type="text/javascript" src="/js/nicepage.js" ></script> */}
       </Head>
       <Component {...pageProps} />
     </>

@@ -57,7 +57,7 @@ const DeskripsiProduk = (props) => {
 
     const Pesan = () => {
         /* Whatsapp Window Open */
-            window.open('https://web.whatsapp.com/send' + '?phone=' + '6283857247099'  + '&text='+ 'Halo saya ingin memesan'+ '%20' + '%20' + namaBundling + '%20' + '(' + '%20' + '*' + hargaBundling + '*' + '%20' + ')' + '%0A' +
+            window.open('https://wa.me/send' + '?phone=' + '6283857247099'  + '&text='+ 'Halo saya ingin memesan'+ '%20' + '%20' + namaBundling + '%20' + '(' + '%20' + '*' + hargaBundling + '*' + '%20' + ')' + '%0A' +
                 '*Informasi Paket Bundling : ' + '%20' + deskripBundling +'*'+ '%0A%0A' +
                 '*' + 'Isi Form Penerima' + '*' + '%0A' +
                 '*Name : ' + '%0A' +

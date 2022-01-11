@@ -30,7 +30,7 @@ const ListSearch = (props) => {
         produk = (
             <div className="u-custom-font u-font-lato u-product-control u-product-price u-product-price-1">
                 <div className="u-price-wrapper u-spacing-10">
-                    <div className="u-old-price" style={{ fontSize: "1rem", textDecoration: "line-through !important" }}>
+                    <div className="u-old-price" style={{ fontSize: "1rem", textDecoration: "line-through " }}>
                         {props.hargaProduk}
                     </div>
                     <div className="u-price u-text-palette-2-base" style={{ fontSize: "1.10rem", fontWeight: "700" }}>
