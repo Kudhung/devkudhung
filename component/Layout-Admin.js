@@ -1,8 +1,11 @@
 import Link from 'next/link'
+import Script from "next/script";
 
 const LayoutAdmin = (props) => (
     <>
         <link rel="stylesheet" href="/css/Admin.css" media="screen" />
+        <Script className="u-script" type="text/javascript" src="/js/jquery.js"></Script>
+        <Script className="u-script" type="text/javascript" src="/js/nicepage.js" ></Script>
         <div className="u-body">
             < header className="u-align-center u-clearfix u-header u-header" id="sec-dce1" >
                 <div className="u-clearfix u-sheet u-sheet-1">

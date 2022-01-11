@@ -1,9 +1,13 @@
 import Footer from "./Footer"
 import NavbarUser from "./Navbar-User";
 import Link from 'next/link'
+import Script from "next/script";
 
 const LayoutSlider = (props) => (
+
     <div className="u-body">
+        <Script className="u-script" type="text/javascript" src="/js/jquery.js"></Script>
+        <Script className="u-script" type="text/javascript" src="/js/nicepage.js" ></Script>
         < header className="u-align-center u-clearfix u-header u-header" id="sec-dce1" >
             <div className="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
                 {/* <!-- Logo  --> */}
@@ -15,7 +19,7 @@ const LayoutSlider = (props) => (
                 {props.childrenSearch}
                 {/* <!-- Slider  --> */}
                 {/* <!-- Profile --> */}
-                    <span className="u-align-center-sm u-align-center-xs u-icon u-icon-circle u-icon-1" style={{ fontSize: "37px", cursor: "pointer" }}>
+                <span className="u-align-center-sm u-align-center-xs u-icon u-icon-circle u-icon-1" style={{ fontSize: "37px", cursor: "pointer" }}>
                 </span>
                 {/* <!--Shopping_Cart--> */}
                 <a className="u-align-center-sm u-align-center-xs u-shopping-cart u-shopping-cart-1"  >
