@@ -123,7 +123,6 @@ const Form = (props) => {
                                         type="text"
                                         placeholder="Masukkan Keterangan Gambar"
                                         id="text-c908"
-                                        name="text-6"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
                                         {...register('keteranganGambar2', { required: true })}
                                         value={props.keteranganGambar2}
@@ -179,9 +178,9 @@ const EditBundling = (props) => {
     const [hargaBundling, setHargaBundling] = useState(props.hargaBundling)
     const [deskripsiBundling, setDeskripsiBundling] = useState(props.DeskripsiBundling)
     const [base64URL1, setBase641] = useState([])
-    const [gmbrstring1, setGmbrString1] = useState()
+    const [gmbrstring1, setGmbrString1] = useState(props.gambar1Bundling)
     const [base64URL2, setBase642] = useState([])
-    const [gmbrstring2, setGmbrString2] = useState()
+    const [gmbrstring2, setGmbrString2] = useState(props.gambar2Bundling)
     // const file = null
 
     const getBase64 = (file) => {
