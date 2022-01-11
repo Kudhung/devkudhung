@@ -1,5 +1,4 @@
 import Footer from "./Footer"
-import NavbarUser from "./Navbar-User";
 import Link from 'next/link'
 import Script from "next/script";
 
