@@ -73,12 +73,12 @@ const About = ({daftarSlider}) => {
                                     <li>
                                         <div className="u-list-icon">
                                             <i className="fas fa-check" style={{ color: "green", fontSize: "25px" }}></i>
-                                        </div>Pilih "Detail Produk"
+                                        </div>Pilih Detail Produk
                                     </li>
                                     <li>
                                         <div className="u-list-icon">
                                             <i className="fas fa-check" style={{ color: "green", fontSize: "25px" }}></i>
-                                        </div>Pilih "Pesan Sekarang"
+                                        </div>Pilih Pesan Sekarang
                                     </li>
                                     <li>
                                         <div className="u-list-icon">
