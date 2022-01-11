@@ -63,7 +63,7 @@ const Form = (props) => {
                             />
                         </div>
                         <div className="u-clearfix u-form-spacing-10 u-form-horizontal u-inner-form " style={{ marginTop: "2%", marginLeft: "0%", marginRight: "-1%" }}>
-                            <div style={{ marginTop: "3%" }} className="u-form-group u-form-select u-form-group-8" style={{ width: "100%" }}>
+                            <div className="u-form-group u-form-select u-form-group-8" style={{ width: "100%", marginTop: "3%"  }}>
                                 <div className=" u-white u-form-textarea u-form-group-9" style={{ marginRight: "1%", width: "50%" }}>
                                     <label htmlFor="text-c8ee" className="u-label"><b>Gambar Bundling</b></label>
                                     <label htmlFor="text-c908" className="u-label" style={{ float: "left", marginLeft: "3%", marginTop: "10%" }} >Keterangan Gambar
