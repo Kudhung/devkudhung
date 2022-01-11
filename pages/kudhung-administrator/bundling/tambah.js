@@ -24,42 +24,39 @@ const Form = (props) => {
                     <div className="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style={{ padding: "18px" }}>
                         <div style={{ marginTop: "3%" }} className="u-form-group u-form-group-1">
                             <label htmlFor="text-8ddb" className="u-label">Nama Bundling</label>
-                            <br/>
-                                <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                    {errors.namaBundling?.type === 'required' && "(Nama Bundling Kosong)"}
-                                </p>
+                            <br />
+                            <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
+                                {errors.namaBundling?.type === 'required' && "(Nama Bundling Kosong)"}
+                            </p>
                             <input
                                 type="text"
                                 placeholder="Masukkan Nama Bundling"
-                                id="text-8ddb"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-1"
                                 {...register('namaBundling', { required: true })}
                             />
                         </div>
                         <div style={{ marginTop: "3%" }} className="u-form-group u-form-group-3" >
                             <label htmlFor="text-2398" className="u-label">Harga Bundling</label>
-                            <br/>
-                                <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                    {errors.hargaBundling?.type === 'required' && "(Harga Bundling Kosong)"}
-                                </p>
+                            <br />
+                            <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
+                                {errors.hargaBundling?.type === 'required' && "(Harga Bundling Kosong)"}
+                            </p>
                             <input
                                 type="text"
                                 placeholder="Masukkan Harga Bundling"
-                                id="text-2398"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-3"
                                 {...register('hargaBundling', { required: true })}
                             />
                         </div>
                         <div style={{ marginTop: "3%" }} className="u-form-group u-form-textarea u-form-group-9">
                             <label htmlFor="textarea-8259" className="u-label">Deskripsi Bundling</label>
-                            <br/>
-                                <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                    {errors.deskripsiBundling?.type === 'required' && "(Deskripsi Bundling Kosong)"}
-                                </p>
+                            <br />
+                            <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
+                                {errors.deskripsiBundling?.type === 'required' && "(Deskripsi Bundling Kosong)"}
+                            </p>
                             <textarea
                                 rows="4"
                                 cols="50"
-                                id="textarea-8259"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-9"
                                 placeholder="Tulis Deskripsi Bundling"
                                 {...register('deskripsiBundling', { required: true })}
@@ -71,8 +68,8 @@ const Form = (props) => {
                                     <label htmlFor="text-c8ee" className="u-label"><b>Gambar Bundling</b></label>
                                     <label htmlFor="text-c908" className="u-label" style={{ float: "left", marginLeft: "3%", marginTop: "10%" }} >Keterangan Gambar
                                     </label>
-                                    <br/>
-                                    <br/>
+                                    <br />
+                                    <br />
                                     <br />
                                     <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "3%", marginTop: "-4%" }}>
                                         {errors.keteranganGambar1?.type === 'required' && "(Keterangan Gambar Kosong)"}
@@ -80,7 +77,6 @@ const Form = (props) => {
                                     <input
                                         type="text"
                                         placeholder="Masukkan Keterangan Gambar"
-                                        id="text-c908"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
                                         {...register('keteranganGambar1', { required: true })}
                                         style={{ textAlign: "center", marginLeft: "3%", width: "80%" }}
@@ -90,7 +86,6 @@ const Form = (props) => {
                                     </p>
                                     <input
                                         type="file"
-                                        id="text-c8ee"
                                         {...register('gambar1', { required: true })}
                                         onChange={props.handleFileInputChange}
                                         className="  u-input-rectangle custom-file-input"
@@ -101,7 +96,7 @@ const Form = (props) => {
                                     <label htmlFor="text-c8ee" className="u-label"><b>Gambar Bundling</b></label>
                                     <label htmlFor="text-c908" className="u-label" style={{ float: "left", marginLeft: "3%", marginTop: "10%" }} >Keterangan Gambar
                                     </label>
-                                    <br/>
+                                    <br />
                                     <br />
                                     <br />
                                     <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "3%", marginTop: "-4%" }}>
@@ -110,8 +105,6 @@ const Form = (props) => {
                                     <input
                                         type="text"
                                         placeholder="Masukkan Keterangan Gambar"
-                                        id="text-c908"
-                                        name="text-6"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
                                         {...register('keteranganGambar2', { required: true })}
                                         style={{ textAlign: "center", marginLeft: "3%", width: "80%" }}
@@ -121,7 +114,6 @@ const Form = (props) => {
                                     </p>
                                     <input
                                         type="file"
-                                        id="text-c8ee"
                                         {...register('gambar2', { required: true })}
                                         onChange={props.handleFileInputChange2}
                                         className="  u-input-rectangle custom-file-input"
