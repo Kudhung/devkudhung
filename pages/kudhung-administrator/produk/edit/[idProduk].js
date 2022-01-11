@@ -1,8 +1,8 @@
 import LayoutAdmin from "../../../../component/Layout-Admin"
 import Link from "next/link"
 import { useState } from "react"
-import { useForm } from 'react-hook-form'
-import prisma from '../../../../client.ts'
+import { useForm } from "react-hook-form"
+import prisma from "../../../../client.ts"
 
 export async function getServerSideProps(context) {
     const daftarProduk = await prisma.produk.findMany();
@@ -27,32 +27,32 @@ const Form = (props) => {
                     <div className="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style={{ padding: "18px" }}>
                         <div className="u-form-group u-form-group-1">
                             <label htmlFor="text-8ddb" className="u-label">Nama Produk</label>
-                            <br/>
-                                <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                    {errors.namaProduk?.type === 'required' && "(Nama Produk Kosong)"}
-                                </p>
+                            <br />
+                            <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
+                                {errors.namaProduk?.type === "required" && "(Nama Produk Kosong)"}
+                            </p>
                             <input
                                 type="text"
                                 placeholder="Masukkan Nama Produk"
                                 id="text-8ddb"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-1"
-                                {...register('namaProduk', { required: true })}
+                                {...register("namaProduk", { required: true })}
                                 value={props.namaProduk}
                                 onChange={(Event) => props.setNamaProduk(Event.target.value)}
                             />
                         </div>
                         <div className="u-form-group u-form-group-2">
                             <label htmlFor="text-f0b0" className="u-label">Jenis Kain</label>
-                            <br/>
-                                <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                    {errors.jenisKain?.type === 'required' && "(Jenis Kain Kosong)"}
-                                </p>
+                            <br />
+                            <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
+                                {errors.jenisKain?.type === "required" && "(Jenis Kain Kosong)"}
+                            </p>
                             <input
                                 type="text"
                                 placeholder="Masukkan Jenis Kain"
                                 id="text-f0b0"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-2"
-                                {...register('jenisKain', { required: true })}
+                                {...register("jenisKain", { required: true })}
                                 value={props.jenisKain}
                                 onChange={(Event) => props.setJenisKain(Event.target.value)}
                             />
@@ -60,45 +60,45 @@ const Form = (props) => {
                         <div className="u-form-group u-form-group-3">
                             <label htmlFor="text-2398" className="u-label">Harga Produk
                             </label>
-                            <br/>
-                                <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                    {errors.hargaProduk?.type === 'required' && "(Harga Produk Kosong)"}
-                                </p>
+                            <br />
+                            <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
+                                {errors.hargaProduk?.type === "required" && "(Harga Produk Kosong)"}
+                            </p>
                             <input
                                 type="text"
                                 placeholder="Masukkan Harga Produk"
                                 id="text-2398"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-3"
-                                {...register('hargaProduk', { required: true })}
+                                {...register("hargaProduk", { required: true })}
                                 value={props.hargaProduk}
                                 onChange={(Event) => props.setHargaProduk(Event.target.value)}
                             />
                         </div>
                         <div className="u-form-group u-form-group-4">
                             <label htmlFor="text-dcdb" className="u-label">Harga Sale</label>
-                            <br/>
-                                <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                    {errors.hargaSale?.type === 'required' && "(Harga Sale Kosong)"}
-                                </p>
+                            <br />
+                            <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
+                                {errors.hargaSale?.type === "required" && "(Harga Sale Kosong)"}
+                            </p>
                             <input
                                 type="text"
                                 placeholder="Masukkan Harga Sale"
                                 id="text-dcdb"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-4"
-                                {...register('hargaSale', { required: false })}
+                                {...register("hargaSale", { required: false })}
                                 value={props.hargaSale}
                                 onChange={(Event) => props.setHargaSale(Event.target.value)}
                             />
                         </div>
                         <div className="u-form-group u-form-select u-form-group-8">
                             <label htmlFor="select-72c2" className="u-label">Jenis Tepi</label>
-                            <br/>
-                                <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                    {errors.jenisTepi?.type === 'required' && "(Pilih Jenis Tepi)"}
-                                </p>
+                            <br />
+                            <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
+                                {errors.jenisTepi?.type === "required" && "(Pilih Jenis Tepi)"}
+                            </p>
                             <select
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-8"
-                                {...register('jenisTepi', { required: true })}
+                                {...register("jenisTepi", { required: true })}
                                 value={props.tepiProduk}
                                 onChange={(Event) => props.setTepiProduk(Event.target.value)}
                             >
@@ -116,13 +116,13 @@ const Form = (props) => {
                         <div className="u-form-group u-form-select u-form-group-8">
                             <label htmlFor="select-72c2" className="u-label">Ukuran Produk
                             </label>
-                            <br/>
-                                <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                    {errors.ukuranProduk?.type === 'required' && "(Pilih Ukuran Produk)"}
-                                </p>
+                            <br />
+                            <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
+                                {errors.ukuranProduk?.type === "required" && "(Pilih Ukuran Produk)"}
+                            </p>
                             <select
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-8"
-                                {...register('ukuranProduk', { required: true })}
+                                {...register("ukuranProduk", { required: true })}
                                 value={props.ukuranProduk}
                                 onChange={(Event) => props.setUkuranProduk(Event.target.value)}
                             >
@@ -139,14 +139,14 @@ const Form = (props) => {
                                 <optgroup label="Pashmina">
                                     <option value="160 cm X 50 cm (Standart)">1. 160 cm X 50 cm (Standart)</option>
                                     <option value="190 cm X 75 cm (Standart)">2. 190 cm X 75 cm (Standart)</option>
-                                    <option value="75 cm X 200 cm ( Syar'i)">3. 75 cm X 200 cm ( Syar'i)</option>
-                                    <option value="200 cm X 150 cm (Syar'i)">4. 200 cm X 150 cm (Syar'i)</option>
+                                    <option value="75 cm X 200 cm ( Syar'i)">3. 75 cm X 200 cm ( Syar"i)</option>
+                                    <option value="200 cm X 150 cm (Syar'i)">4. 200 cm X 150 cm (Syar"i)</option>
                                     <option value="30 cm X 150 cm">5. 30 cm X 150 cm </option>
                                     <option value="180 cm X 70 cm">6. 180 cm X 70 cm </option>
                                 </optgroup>
                                 <optgroup label="Segiempat">
                                     <option value="115 cm X 115 cm (Standart)">1. 115 cm X 115 cm (Standart)</option>
-                                    <option value="140 cm X 140 cm ( Syar'i)">2. 140 cm X 140 cm ( Syar'i)</option>
+                                    <option value="140 cm X 140 cm ( Syar'i)">2. 140 cm X 140 cm ( Syar"i)</option>
                                     <option value="102 cm X 102 cm">3. 102 cm X 102 cm </option>
                                     <option value="100 cm X 150 cm">4. 100 cm X 150 cm </option>
                                 </optgroup>
@@ -154,13 +154,13 @@ const Form = (props) => {
                         </div>
                         <div className="u-form-group u-form-select u-form-group-8">
                             <label htmlFor="select-72c2" className="u-label">Status Produk </label>
-                            <br/>
-                                <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                    {errors.statusProduk?.type === 'required' && "(Pilih Status Produk)"}
-                                </p>
+                            <br />
+                            <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
+                                {errors.statusProduk?.type === "required" && "(Pilih Status Produk)"}
+                            </p>
                             <select
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-8"
-                                {...register('statusProduk', { required: true })}
+                                {...register("statusProduk", { required: true })}
                                 value={props.statusProduk}
                                 onChange={(Event) => props.setStatusProduk(Event.target.value)}
                             >
@@ -171,13 +171,13 @@ const Form = (props) => {
                         </div>
                         <div className="u-form-group u-form-select u-form-group-8">
                             <label htmlFor="select-72c2" className="u-label">Kategori</label>
-                            <br/>
-                                <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                    {errors.kategoriProduk?.type === 'required' && "(Pilih Kategori)"}
-                                </p>
+                            <br />
+                            <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
+                                {errors.kategoriProduk?.type === "required" && "(Pilih Kategori)"}
+                            </p>
                             <select
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-8"
-                                {...register('kategoriProduk', { required: true })}
+                                {...register("kategoriProduk", { required: true })}
                                 value={props.kategoriProduk}
                                 onChange={(Event) => props.setKategoriProduk(Event.target.value)}
                             >
@@ -191,66 +191,66 @@ const Form = (props) => {
                         <div className="u-form-group u-form-textarea u-form-group-9">
                             <label htmlFor="textarea-8259" className="u-label">Deskripsi Produk
                             </label>
-                            <br/>
-                                <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                    {errors.deskripsiProduk?.type === 'required' && "(Deskripisi Produk Kosong)"}
-                                </p>
+                            <br />
+                            <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
+                                {errors.deskripsiProduk?.type === "required" && "(Deskripisi Produk Kosong)"}
+                            </p>
                             <textarea
                                 rows="4"
                                 cols="50"
                                 id="textarea-8259"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-9"
                                 placeholder="Tulis Deskripsi Produk"
-                                {...register('deskripsiProduk', { required: true })}
+                                {...register("deskripsiProduk", { required: true })}
                                 value={props.deskripsiProduk}
                                 onChange={(Event) => props.setDeskripsiProduk(Event.target.value)}
                             />
                         </div>
                         <div className="u-clearfix u-form-spacing-10 u-form-horizontal u-inner-form " style={{ marginTop: "2%", marginLeft: "0%", marginRight: "-1%" }}>
                             <div style={{ marginTop: "3%" }} className="u-form-group u-form-select u-form-group-8" style={{ width: "100%" }}>
-                                <div className=" u-white " style={{ marginRight: "1%", width:"50%" }}>
+                                <div className=" u-white " style={{ marginRight: "1%", width: "50%" }}>
                                     <label htmlFor="text-c8ee" className="u-label"><b>Gambar Produk</b></label>
                                     <label htmlFor="text-c908" className="u-label" style={{ float: "left", marginLeft: "3%", marginTop: "10%" }} >Keterangan Gambar
                                     </label>
-                                    <br/>
                                     <br />
-                                    <br/>
+                                    <br />
+                                    <br />
                                     <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "3%", marginTop: "-4%" }}>
-                                        {errors.keteranganGambar1?.type === 'required' && "(Keterangan Gambar Kosong)"}
+                                        {errors.keteranganGambar1?.type === "required" && "(Keterangan Gambar Kosong)"}
                                     </p>
                                     <input
                                         type="text"
                                         placeholder="Masukkan Keterangan Gambar"
                                         id="text-c908"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
-                                        {...register('keteranganGambar1', { required: true })}
+                                        {...register("keteranganGambar1", { required: true })}
                                         value={props.keteranganGambar1}
                                         onChange={(Event) => props.setKeteranganGambar1(Event.target.value)}
                                         style={{ textAlign: "center", marginLeft: "3%", width: "80%" }}
                                     />
                                     <p style={{ color: "red", fontSize: "12px", marginTop: "10%", marginLeft: "3%", marginBottom: "0%" }}>
-                                        {errors.gambar1?.type === 'required' && "(Pilih Gambar Produk)"}
+                                        {errors.gambar1?.type === "required" && "(Pilih Gambar Produk)"}
                                     </p>
                                     <input
                                         type="file"
                                         id="text-c8ee"
-                                        {...register('gambar1', { required: false })}
+                                        {...register("gambar1", { required: false })}
                                         onChange={props.handleFileInputChange}
                                         className="  u-input-rectangle custom-file-input"
                                     />
-                                    <img src={props.gambar1Produk} className="gambar-gambar"/>
+                                    <img src={props.gambar1Produk} className="gambar-gambar" />
                                     <i className="fas fa-angle-double-right double-panah" ></i>
-                                    <img src={props.gmbrstring1} className="gambar-gambar2" />  
+                                    <img src={props.gmbrstring1} className="gambar-gambar2" />
                                 </div>
-                                <div className=" u-white " style={{ marginLeft: "1%", width:"50%" }}>
+                                <div className=" u-white " style={{ marginLeft: "1%", width: "50%" }}>
                                     <label htmlFor="text-c8ee" className="u-label"><b>Gambar Produk</b></label>
                                     <label htmlFor="text-c908" className="u-label" style={{ float: "left", marginLeft: "3%", marginTop: "10%" }} >Keterangan Gambar
                                     </label>
-                                    <br/>
                                     <br />
                                     <br />
-                                    <p  style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "3%", marginTop: "-4%" }}>
-                                        {errors.keteranganGambar2?.type === 'required' && "(Keterangan Gambar Kosong)"}
+                                    <br />
+                                    <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "3%", marginTop: "-4%" }}>
+                                        {errors.keteranganGambar2?.type === "required" && "(Keterangan Gambar Kosong)"}
                                     </p>
                                     <input
                                         type="text"
@@ -258,22 +258,22 @@ const Form = (props) => {
                                         id="text-c908"
                                         name="text-6"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
-                                        {...register('keteranganGambar2', { required: true })}
+                                        {...register("keteranganGambar2", { required: true })}
                                         value={props.keteranganGambar2}
                                         onChange={(Event) => props.setKeteranganGambar2(Event.target.value)}
                                         style={{ textAlign: "center", marginLeft: "3%", width: "80%" }}
                                     />
                                     <p style={{ color: "red", fontSize: "12px", marginTop: "10%", marginLeft: "3%", marginBottom: "0%" }}>
-                                        {errors.gambar2?.type === 'required' && "(Pilih Gambar Produk)"}
+                                        {errors.gambar2?.type === "required" && "(Pilih Gambar Produk)"}
                                     </p>
                                     <input
                                         type="file"
                                         id="text-c8ee"
-                                        {...register('gambar2', { required: false })}
+                                        {...register("gambar2", { required: false })}
                                         onChange={props.handleFileInputChange2}
                                         className=" u-input-rectangle custom-file-input"
                                     />
-                                    <img src={props.gambar2Produk} className="gambar-gambar"/>
+                                    <img src={props.gambar2Produk} className="gambar-gambar" />
                                     <i className="fas fa-angle-double-right double-panah" ></i>
                                     <img src={props.gmbrstring2} className="gambar-gambar2" />
                                 </div>
@@ -285,7 +285,7 @@ const Form = (props) => {
                                     <label htmlFor="text-c8ee" className="u-label"><b>Gambar Produl</b></label>
                                     <label htmlFor="text-c908" className="u-label" style={{ float: "left", marginLeft: "3%" }} >Keterangan Gambar 
                                         <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                            {errors.keteranganGambar1?.type === 'required' && "(Keterangan Bundling Kosong)"}
+                                            {errors.keteranganGambar1?.type === "required" && "(Keterangan Bundling Kosong)"}
                                         </p>
                                     </label>
                                     <input
@@ -293,18 +293,18 @@ const Form = (props) => {
                                         placeholder="Masukkan Keterangan Gambar"
                                         id="text-c908"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
-                                        {...register('keteranganGambar1', { required: true })}
+                                        {...register("keteranganGambar1", { required: true })}
                                         style={{ textAlign: "center", marginLeft: "3%", width: "80%" }}
                                         value={props.keteranganGambar1}
                                         onChange={(Event) => props.setKeteranganGambar1(Event.target.value)}
                                     />
                                     <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                        {errors.gambar1?.type === 'required' && "(Pilih Gambar Produk)"}
+                                        {errors.gambar1?.type === "required" && "(Pilih Gambar Produk)"}
                                     </p>
                                     <input
                                         type="file"
                                         id="text-c8ee"
-                                        {...register('gambar1', { required: false })}
+                                        {...register("gambar1", { required: false })}
                                         onChange={props.handleFileInputChange}
                                         className=" u-input-rectangle custom-file-input"
                                     />
@@ -316,7 +316,7 @@ const Form = (props) => {
                                     <label htmlFor="text-c8ee" className="u-label"><b>Gambar Produk</b></label>
                                     <label htmlFor="text-c908" className="u-label" style={{ float: "left", marginLeft: "3%" }} >Keterangan Gambar
                                         <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                            {errors.keteranganGambar2?.type === 'required' && "(Keterangan Gambar Kosong)"}
+                                            {errors.keteranganGambar2?.type === "required" && "(Keterangan Gambar Kosong)"}
                                         </p>
                                     </label>
                                     <input
@@ -325,18 +325,18 @@ const Form = (props) => {
                                         id="text-c908"
                                         name="text-6"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
-                                        {...register('keteranganGambar2', { required: true })}
+                                        {...register("keteranganGambar2", { required: true })}
                                         style={{ textAlign: "center", marginLeft: "3%", width: "80%" }}
                                         value={props.keteranganGambar2}
                                         onChange={(Event) => props.setKeteranganGambar2(Event.target.value)}
                                     />
                                     <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                        {errors.gambar2?.type === 'required' && "(Pilih Gambar Produk)"}
+                                        {errors.gambar2?.type === "required" && "(Pilih Gambar Produk)"}
                                     </p>
                                     <input
                                         type="file"
                                         id="text-c8ee"
-                                        {...register('gambar2', { required: false })}
+                                        {...register("gambar2", { required: false })}
                                         onChange={props.handleFileInputChange2}
                                         // name={base64URL} 
                                         className="u-input-rectangle custom-file-input"
@@ -353,7 +353,7 @@ const Form = (props) => {
                                     <label htmlFor="text-c8ee" className="u-label"><b>Gambar Produk</b></label>
                                     <label htmlFor="text-c908" className="u-label" style={{ float: "left", marginLeft: "3%" }} >Keterangan Gambar
                                         <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                            {errors.keteranganGambar1?.type === 'required' && "(Keterangan Gambar Kosong)"}
+                                            {errors.keteranganGambar1?.type === "required" && "(Keterangan Gambar Kosong)"}
                                         </p>
                                     </label>
                                     <input
@@ -361,18 +361,18 @@ const Form = (props) => {
                                         placeholder="Masukkan Keterangan Gambar"
                                         id="text-c908"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
-                                        {...register('keteranganGambar1', { required: true })}
+                                        {...register("keteranganGambar1", { required: true })}
                                         style={{ textAlign: "center", marginLeft: "3%", width: "80%" }}
                                         value={props.keteranganGambar1}
                                         onChange={(Event) => props.setKeteranganGambar1(Event.target.value)}
                                     />
                                     <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                        {errors.gambar1?.type === 'required' && "(Pilih Gambar)"}
+                                        {errors.gambar1?.type === "required" && "(Pilih Gambar)"}
                                     </p>
                                     <input
                                         type="file"
                                         id="text-c8ee"
-                                        {...register('gambar1', { required: false })}
+                                        {...register("gambar1", { required: false })}
                                         onChange={props.handleFileInputChange}
                                         className=" u-input u-input-rectangle custom-file-input"
                                         style={{ width: "45%" }}
@@ -385,7 +385,7 @@ const Form = (props) => {
                                     <label htmlFor="text-c8ee" className="u-label"><b>Gambar Produk</b></label>
                                     <label htmlFor="text-c908" className="u-label" style={{ float: "left", marginLeft: "3%" }} >Keterangan Gambar
                                         <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                            {errors.keteranganGambar2?.type === 'required' && "(Keterangan Gambar Kosong)"}
+                                            {errors.keteranganGambar2?.type === "required" && "(Keterangan Gambar Kosong)"}
                                         </p>
                                     </label>
                                     <input
@@ -394,18 +394,18 @@ const Form = (props) => {
                                         id="text-c908"
                                         name="text-6"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
-                                        {...register('keteranganGambar2', { required: true })}
+                                        {...register("keteranganGambar2", { required: true })}
                                         style={{ textAlign: "center", marginLeft: "3%", width: "80%" }}
                                         value={props.keteranganGambar2}
                                         onChange={(Event) => props.setKeteranganGambar2(Event.target.value)}
                                     />
                                     <p   style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                        {errors.gambar2?.type === 'required' && "(Pilih Gambar)"}
+                                        {errors.gambar2?.type === "required" && "(Pilih Gambar)"}
                                     </p>
                                     <input
                                         type="file"
                                         id="text-c8ee"
-                                        {...register('gambar2', { required: false })}
+                                        {...register("gambar2", { required: false })}
                                         onChange={props.handleFileInputChange2}
                                         className=" u-input u-input-rectangle custom-file-input"
                                         style={{ width: "45%" }}
@@ -425,7 +425,7 @@ const Form = (props) => {
 
                             </button>
 
-                            <Link href='/kudhung-administrator'>
+                            <Link href="/kudhung-administrator">
                                 <button className="button-batal button2"><span>Batal
                                 </span></button>
                             </Link>
@@ -483,8 +483,8 @@ const EditProduk = (props) => {
         file = e.target.files[0];
         getBase64(file)
             .then(result => {
-                let filebase64 = file["base64"] = Buffer.from(result).toString('base64')
-                let filestring = file["stringimage"] = Buffer.from(filebase64, 'base64').toString()
+                let filebase64 = file["base64"] = Buffer.from(result).toString("base64")
+                let filestring = file["stringimage"] = Buffer.from(filebase64, "base64").toString()
                 setBase641(filebase64)
                 setGmbrString1(filestring)
             })
@@ -499,8 +499,8 @@ const EditProduk = (props) => {
         file = e.target.files[0];
         getBase64(file)
             .then(result => {
-                let filebase64 = file["base64"] = Buffer.from(result).toString('base64')
-                let filestring = file["stringimage"] = Buffer.from(filebase64, 'base64').toString()
+                let filebase64 = file["base64"] = Buffer.from(result).toString("base64")
+                let filestring = file["stringimage"] = Buffer.from(filebase64, "base64").toString()
                 setBase642(filebase64)
                 setGmbrString2(filestring)
             })
@@ -554,8 +554,8 @@ const EditProduk = (props) => {
 
                         };
                         try {
-                            const respon = await fetch('/api/Produk/Update', {
-                                method: 'POST',
+                            const respon = await fetch("/api/Produk/Update", {
+                                method: "POST",
                                 body: JSON.stringify(produk),
                             });
                             if (!respon.ok) throw new Error(respon.statusText);
