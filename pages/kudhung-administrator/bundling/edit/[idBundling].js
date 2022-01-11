@@ -33,7 +33,6 @@ const Form = (props) => {
                             <input
                                 type="text"
                                 placeholder="Masukkan Nama Bundling"
-                                id="text-8ddb"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-1"
                                 {...register('namaBundling', { required: true })}
                                 value={props.namaBundling}
@@ -49,7 +48,6 @@ const Form = (props) => {
                             <input
                                 type="text"
                                 placeholder="Masukkan Harga Bundling"
-                                id="text-2398"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-3"
                                 {...register('hargaBundling', { required: true })}
                                 value={props.hargaBundling}
@@ -65,7 +63,6 @@ const Form = (props) => {
                             <textarea
                                 rows="4"
                                 cols="50"
-                                id="textarea-8259"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-9"
                                 placeholder="Tulis Deskripsi Produk"
                                 {...register('deskripsiBundling', { required: true })}
@@ -88,7 +85,6 @@ const Form = (props) => {
                                     <input
                                         type="text"
                                         placeholder="Masukkan Keterangan Gambar"
-                                        id="text-c908"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
                                         {...register('keteranganGambar1', { required: true })}
                                         value={props.keteranganGambar1}
@@ -100,7 +96,6 @@ const Form = (props) => {
                                     </p>
                                     <input
                                         type="file"
-                                        id="text-c8ee"
                                         {...register('gambar1', { required: false })}
                                         onChange={props.handleFileInputChange}
                                         className="  u-input-rectangle custom-file-input"
@@ -122,7 +117,6 @@ const Form = (props) => {
                                     <input
                                         type="text"
                                         placeholder="Masukkan Keterangan Gambar"
-                                        id="text-c908"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
                                         {...register('keteranganGambar2', { required: true })}
                                         value={props.keteranganGambar2}
@@ -134,7 +128,6 @@ const Form = (props) => {
                                     </p>
                                     <input
                                         type="file"
-                                        id="text-c8ee"
                                         {...register('gambar2', { required: false })}
                                         onChange={props.handleFileInputChange2}
                                         className=" u-input-rectangle custom-file-input"
