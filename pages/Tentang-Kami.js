@@ -3,18 +3,18 @@ import prisma from '../client.ts'
 import Script from 'next/script'
 
 export async function getServerSideProps(context) {
-  const daftarSlider = await prisma.slider.findMany({
-    where: { kategoriSlider: "Beranda", statusSlider: "On" },
-  });
-  return { props: { daftarSlider } }
+    const daftarSlider = await prisma.slider.findMany({
+        where: { kategoriSlider: "Beranda", statusSlider: "On" },
+    });
+    return { props: { daftarSlider } }
 }
 
-const About = ({daftarSlider}) => {
+const About = ({ daftarSlider }) => {
     return (
         <>
             <link rel="stylesheet" href="/css/Tentang-Kami.css" media="screen" />
-        <Script  src="/js/nicepage.js" ></Script>
-        <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></Script>
+            <Script src="/js/nicepage.js" ></Script>
+            <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></Script>
             <LayoutSlider
                 childrenSlider=
                 {daftarSlider.map((slider) => (

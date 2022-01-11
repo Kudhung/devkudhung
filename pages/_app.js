@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Script from 'next/script'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,8 +9,8 @@ function MyApp({ Component, pageProps }) {
         <meta content="#333333" name="theme-color" />
         <link rel="stylesheet" href="/css/nicepage.css" media="screen" />
         <link rel="stylesheet" href="/css/Post-Template.css" media="screen" />
-        <Script src="/js/jquery.js" ></Script>
-        <Script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></Script>
+        <script  src="/js/jquery.js" ></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <meta name="generator" content="Nicepage 3.27.0, nicepage.com" />
         <link id="u-theme-google-font" rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" />
