@@ -1,8 +1,8 @@
 import LayoutAdmin from "../../../component/Layout-Admin"
 import Link from "next/link"
 import { useState } from "react"
-import { useForm } from "react-hook-form"
-import prisma from "../../../client.ts"
+import { useForm } from 'react-hook-form'
+import prisma from '../../../client.ts'
 
 export async function getServerSideProps(context) {
     const daftarKategori = await prisma.kategori.findMany();
@@ -29,14 +29,14 @@ const Form = (props) => {
                             </label>
                             <br />
                             <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                {errors.namaProduk?.type === "required" && "(Nama Produk Kosong)"}
+                                {errors.namaProduk?.type === 'required' && "(Nama Produk Kosong)"}
                             </p>
                             <input
                                 type="text"
                                 placeholder="Masukkan Nama Produk"
                                 id="text-8ddb"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-1"
-                                {...register("namaProduk", { required: true })}
+                                {...register('namaProduk', { required: true })}
                             />
                         </div>
                         <div style={{ marginTop: "3%" }} className="u-form-group u-form-group-2">
@@ -44,14 +44,14 @@ const Form = (props) => {
                             </label>
                             <br />
                             <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                {errors.jenisKain?.type === "required" && "(Jenis Kain Kosong)"}
+                                {errors.jenisKain?.type === 'required' && "(Jenis Kain Kosong)"}
                             </p>
                             <input
                                 type="text"
                                 placeholder="Masukkan Jenis Kain"
                                 id="text-f0b0"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-2"
-                                {...register("jenisKain", { required: true })}
+                                {...register('jenisKain', { required: true })}
                             />
                         </div>
                         <div style={{ marginTop: "3%" }} className="u-form-group u-form-group-3">
@@ -59,14 +59,14 @@ const Form = (props) => {
                             </label>
                             <br />
                             <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                {errors.hargaProduk?.type === "required" && "(Harga Produk Kosong)"}
+                                {errors.hargaProduk?.type === 'required' && "(Harga Produk Kosong)"}
                             </p>
                             <input
                                 type="text"
                                 placeholder="Masukkan Harga Produk"
                                 id="text-2398"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-3"
-                                {...register("hargaProduk", { required: true })}
+                                {...register('hargaProduk', { required: true })}
                             />
                         </div>
                         <div style={{ marginTop: "3%" }} className="u-form-group u-form-group-4">
@@ -74,14 +74,14 @@ const Form = (props) => {
                             </label>
                             <br />
                             <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                {errors.hargaSale?.type === "required" && "(Harga Sale Kosong)"}
+                                {errors.hargaSale?.type === 'required' && "(Harga Sale Kosong)"}
                             </p>
                             <input
                                 type="text"
                                 placeholder="Masukkan Harga Sale"
                                 id="hargaSale"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-4"
-                                {...register("hargaSale", { required: false })}
+                                {...register('hargaSale', { required: false })}
                             />
                         </div>
                         <div style={{ marginTop: "3%" }} className="u-form-group u-form-select u-form-group-8">
@@ -89,11 +89,11 @@ const Form = (props) => {
                             </label>
                             <br />
                             <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                {errors.jenisTepi?.type === "required" && "(Pilih Jenis Tepi)"}
+                                {errors.jenisTepi?.type === 'required' && "(Pilih Jenis Tepi)"}
                             </p>
                             <select
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-8"
-                                {...register("jenisTepi", { required: true })}
+                                {...register('jenisTepi', { required: true })}
                             >
                                 <option label="Pilih Jenis Tepi">{false}</option>
                                 <option value="-">Accessories</option>
@@ -111,11 +111,11 @@ const Form = (props) => {
                             </label>
                             <br />
                             <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                {errors.ukuranProduk?.type === "required" && "(Pilih Ukuran Produk)"}
+                                {errors.ukuranProduk?.type === 'required' && "(Pilih Ukuran Produk)"}
                             </p>
                             <select
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-8"
-                                {...register("ukuranProduk", { required: true })}
+                                {...register('ukuranProduk', { required: true })}
                             >
                                 <option label="Pilih Ukuran">{false}</option>
                                 <option value="-">Accessories</option>
@@ -130,14 +130,14 @@ const Form = (props) => {
                                 <optgroup label="Pashmina">
                                     <option value="160 cm X 50 cm (Standart)">1. 160 cm X 50 cm (Standart)</option>
                                     <option value="190 cm X 75 cm (Standart)">2. 190 cm X 75 cm (Standart)</option>
-                                    <option value="75 cm X 200 cm ( Syar'i)">3. 75 cm X 200 cm ( Syar"i)</option>
-                                    <option value="200 cm X 150 cm (Syar'i)">4. 200 cm X 150 cm (Syar"i)</option>
+                                    <option value="75 cm X 200 cm ( Syar&apos;i)">3. 75 cm X 200 cm ( Syar'i)</option>
+                                    <option value="200 cm X 150 cm (Syar&apos;i)">4. 200 cm X 150 cm (Syar'i)</option>
                                     <option value="30 cm X 150 cm">5. 30 cm X 150 cm </option>
                                     <option value="180 cm X 70 cm">6. 180 cm X 70 cm </option>
                                 </optgroup>
                                 <optgroup label="Segiempat">
                                     <option value="115 cm X 115 cm (Standart)">1. 115 cm X 115 cm (Standart)</option>
-                                    <option value="140 cm X 140 cm ( Syar'i)">2. 140 cm X 140 cm ( Syar"i)</option>
+                                    <option value="140 cm X 140 cm ( Syar&apos;i)">2. 140 cm X 140 cm ( Syar'i)</option>
                                     <option value="102 cm X 102 cm">3. 102 cm X 102 cm </option>
                                     <option value="100 cm X 150 cm">4. 100 cm X 150 cm </option>
                                 </optgroup>
@@ -148,11 +148,11 @@ const Form = (props) => {
                             </label>
                             <br />
                             <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                {errors.statusProduk?.type === "required" && "(Pilih Status Produk)"}
+                                {errors.statusProduk?.type === 'required' && "(Pilih Status Produk)"}
                             </p>
                             <select
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-8"
-                                {...register("statusProduk", { required: true })}
+                                {...register('statusProduk', { required: true })}
                             >
                                 <option label="Pilih Status Produk">{false}</option>
                                 <option value="Sale">1. Sale</option>
@@ -164,11 +164,11 @@ const Form = (props) => {
                             </label>
                             <br />
                             <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                {errors.kategoriProduk?.type === "required" && "(Pilih Kategori)"}
+                                {errors.kategoriProduk?.type === 'required' && "(Pilih Kategori)"}
                             </p>
                             <select
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-8"
-                                {...register("kategoriProduk", { required: true })}
+                                {...register('kategoriProduk', { required: true })}
                             >
                                 <option label="Pilih Kategori">{false}</option>
                                 {props.daftarKategori.map((kategori, i = 0) => (
@@ -181,7 +181,7 @@ const Form = (props) => {
                             </label>
                             <br />
                             <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "0%", marginTop: "0%" }}>
-                                {errors.deskripsiProduk?.type === "required" && "(Deskripsi Produk Kosong)"}
+                                {errors.deskripsiProduk?.type === 'required' && "(Deskripsi Produk Kosong)"}
                             </p>
                             <textarea
                                 rows="4"
@@ -189,7 +189,7 @@ const Form = (props) => {
                                 id="textarea-8259"
                                 className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-9"
                                 placeholder="Tulis Deskripsi Produk"
-                                {...register("deskripsiProduk", { required: true })}
+                                {...register('deskripsiProduk', { required: true })}
                             />
                         </div>
                         <div className="u-clearfix u-form-spacing-10 u-form-horizontal u-inner-form " style={{ marginTop: "2%", marginLeft: "0%", marginRight: "-1%" }}>
@@ -202,23 +202,23 @@ const Form = (props) => {
                                     <br />
                                     <br />
                                     <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "3%", marginTop: "-4%" }}>
-                                        {errors.keteranganGambar1?.type === "required" && "(Keterangan Gambar Kosong)"}
+                                        {errors.keteranganGambar1?.type === 'required' && "(Keterangan Gambar Kosong)"}
                                     </p>
                                     <input
                                         type="text"
                                         placeholder="Masukkan Keterangan Gambar"
                                         id="text-c908"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
-                                        {...register("keteranganGambar1", { required: true })}
+                                        {...register('keteranganGambar1', { required: true })}
                                         style={{ textAlign: "center", marginLeft: "3%", width: "80%" }}
                                     />
                                     <p style={{ color: "red", fontSize: "12px", marginTop: "10%", marginLeft: "3%", marginBottom: "0%" }}>
-                                        {errors.gambar1?.type === "required" && "(Pilih Gambar Produk)"}
+                                        {errors.gambar1?.type === 'required' && "(Pilih Gambar Produk)"}
                                     </p>
                                     <input
                                         type="file"
                                         id="text-c8ee"
-                                        {...register("gambar1", { required: true })}
+                                        {...register('gambar1', { required: true })}
                                         onChange={props.handleFileInputChange}
                                         className="  u-input-rectangle custom-file-input"
                                     />
@@ -232,7 +232,7 @@ const Form = (props) => {
                                     <br />
                                     <br />
                                     <p style={{ color: "red", fontSize: "12px", float: "left", marginLeft: "3%", marginTop: "-4%" }}>
-                                        {errors.keteranganGambar2?.type === "required" && "(Keterangan Gambar Kosong)"}
+                                        {errors.keteranganGambar2?.type === 'required' && "(Keterangan Gambar Kosong)"}
                                     </p>
                                     <input
                                         type="text"
@@ -240,16 +240,16 @@ const Form = (props) => {
                                         id="text-c908"
                                         name="text-6"
                                         className="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7"
-                                        {...register("keteranganGambar2", { required: true })}
+                                        {...register('keteranganGambar2', { required: true })}
                                         style={{ textAlign: "center", marginLeft: "3%", width: "80%" }}
                                     />
                                     <p style={{ color: "red", fontSize: "12px", marginTop: "10%", marginLeft: "3%", marginBottom: "0%" }}>
-                                        {errors.gambar2?.type === "required" && "(Pilih Gambar Produk)"}
+                                        {errors.gambar2?.type === 'required' && "(Pilih Gambar Produk)"}
                                     </p>
                                     <input
                                         type="file"
                                         id="text-c8ee"
-                                        {...register("gambar2", { required: true })}
+                                        {...register('gambar2', { required: true })}
                                         onChange={props.handleFileInputChange2}
                                         className=" u-input-rectangle custom-file-input"
                                     />
@@ -265,7 +265,7 @@ const Form = (props) => {
                                     Simpan
                                 </span>
                             </button>
-                            <Link href="/kudhung-administrator">
+                            <Link href='/kudhung-administrator'>
                                 <button className="button-batal button2"><span>Batal
                                 </span></button>
                             </Link>
@@ -310,8 +310,8 @@ const CreateProduk = (props) => {
         file = e.target.files[0];
         getBase64(file)
             .then(result => {
-                let filebase64 = file["base64"] = Buffer.from(result).toString("base64")
-                let filestring = file["stringimage"] = Buffer.from(filebase64, "base64").toString()
+                let filebase64 = file["base64"] = Buffer.from(result).toString('base64')
+                let filestring = file["stringimage"] = Buffer.from(filebase64, 'base64').toString()
                 setBase641(filebase64)
                 setGmbrString1(filestring)
             })
@@ -326,8 +326,8 @@ const CreateProduk = (props) => {
         file = e.target.files[0];
         getBase64(file)
             .then(result => {
-                let filebase64 = file["base64"] = Buffer.from(result).toString("base64")
-                let filestring = file["stringimage"] = Buffer.from(filebase64, "base64").toString()
+                let filebase64 = file["base64"] = Buffer.from(result).toString('base64')
+                let filestring = file["stringimage"] = Buffer.from(filebase64, 'base64').toString()
                 setBase642(filebase64)
                 setGmbrString2(filestring)
             })
@@ -363,8 +363,8 @@ const CreateProduk = (props) => {
                             ukuranProduk: data.ukuranProduk
                         };
                         try {
-                            const respon = await fetch("/api/Produk/Create", {
-                                method: "POST",
+                            const respon = await fetch('/api/Produk/Create', {
+                                method: 'POST',
                                 body: JSON.stringify(produk),
                             });
 
