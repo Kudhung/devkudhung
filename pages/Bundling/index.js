@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { useState, useCallback, useRef, useEffect } from "react";
 import prisma from '../../client.ts'
 
-
 export async function getServerSideProps(context) {
   const daftarKategori = await prisma.kategori.findMany();
   const daftarProduk = await prisma.produk.findMany();
