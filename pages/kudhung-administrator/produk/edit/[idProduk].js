@@ -139,14 +139,14 @@ const Form = (props) => {
                                 <optgroup label="Pashmina">
                                     <option value="160 cm X 50 cm (Standart)">1. 160 cm X 50 cm (Standart)</option>
                                     <option value="190 cm X 75 cm (Standart)">2. 190 cm X 75 cm (Standart)</option>
-                                    <option value="75 cm X 200 cm ( Syar'i)">3. 75 cm X 200 cm ( Syar"i)</option>
-                                    <option value="200 cm X 150 cm (Syar'i)">4. 200 cm X 150 cm (Syar"i)</option>
+                                    <option value="75 cm X 200 cm ( Syar&apos;i)">3. 75 cm X 200 cm (Syar&apos;i)</option>
+                                    <option value="200 cm X 150 cm (Syar&apos;i)">4. 200 cm X 150 cm (Syar&apos;i)</option>
                                     <option value="30 cm X 150 cm">5. 30 cm X 150 cm </option>
                                     <option value="180 cm X 70 cm">6. 180 cm X 70 cm </option>
                                 </optgroup>
                                 <optgroup label="Segiempat">
                                     <option value="115 cm X 115 cm (Standart)">1. 115 cm X 115 cm (Standart)</option>
-                                    <option value="140 cm X 140 cm ( Syar'i)">2. 140 cm X 140 cm ( Syar"i)</option>
+                                    <option value="140 cm X 140 cm ( Syar&apos;i)">2. 140 cm X 140 cm (Syar&apos;i)</option>
                                     <option value="102 cm X 102 cm">3. 102 cm X 102 cm </option>
                                     <option value="100 cm X 150 cm">4. 100 cm X 150 cm </option>
                                 </optgroup>
@@ -207,7 +207,7 @@ const Form = (props) => {
                             />
                         </div>
                         <div className="u-clearfix u-form-spacing-10 u-form-horizontal u-inner-form " style={{ marginTop: "2%", marginLeft: "0%", marginRight: "-1%" }}>
-                            <div style={{ marginTop: "3%" }} className="u-form-group u-form-select u-form-group-8" style={{ width: "100%" }}>
+                            <div  className="u-form-group u-form-select u-form-group-8" style={{ width: "100%", marginTop: "3%"  }}>
                                 <div className=" u-white " style={{ marginRight: "1%", width: "50%" }}>
                                     <label htmlFor="text-c8ee" className="u-label"><b>Gambar Produk</b></label>
                                     <label htmlFor="text-c908" className="u-label" style={{ float: "left", marginLeft: "3%", marginTop: "10%" }} >Keterangan Gambar
