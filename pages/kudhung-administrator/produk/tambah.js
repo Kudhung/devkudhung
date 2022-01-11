@@ -130,14 +130,14 @@ const Form = (props) => {
                                 <optgroup label="Pashmina">
                                     <option value="160 cm X 50 cm (Standart)">1. 160 cm X 50 cm (Standart)</option>
                                     <option value="190 cm X 75 cm (Standart)">2. 190 cm X 75 cm (Standart)</option>
-                                    <option value="75 cm X 200 cm ( Syar&apos;i)">3. 75 cm X 200 cm ( Syar'i)</option>
-                                    <option value="200 cm X 150 cm (Syar&apos;i)">4. 200 cm X 150 cm (Syar'i)</option>
+                                    <option value="75 cm X 200 cm ( Syar&apos;i)">3. 75 cm X 200 cm ( Syar&apos;i)</option>
+                                    <option value="200 cm X 150 cm (Syar&apos;i)">4. 200 cm X 150 cm (Syar&apos;i)</option>
                                     <option value="30 cm X 150 cm">5. 30 cm X 150 cm </option>
                                     <option value="180 cm X 70 cm">6. 180 cm X 70 cm </option>
                                 </optgroup>
                                 <optgroup label="Segiempat">
                                     <option value="115 cm X 115 cm (Standart)">1. 115 cm X 115 cm (Standart)</option>
-                                    <option value="140 cm X 140 cm ( Syar&apos;i)">2. 140 cm X 140 cm ( Syar'i)</option>
+                                    <option value="140 cm X 140 cm ( Syar&apos;i)">2. 140 cm X 140 cm ( Syar&apos;i)</option>
                                     <option value="102 cm X 102 cm">3. 102 cm X 102 cm </option>
                                     <option value="100 cm X 150 cm">4. 100 cm X 150 cm </option>
                                 </optgroup>
