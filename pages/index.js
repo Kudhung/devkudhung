@@ -210,10 +210,12 @@ const Beranda = ({ daftarSlider, daftarKategori, daftarProduk }) => {
               <div className="u-repeater u-repeater-1">
                 {daftarKategori.map((kategori) => (
                   <div key={kategori.idKtg} className="u-align-center u-container-style u-products-item u-repeater-item">
-                    <Kategori
-                      jenisKtg={kategori.jenisKtg}
-                      gambarKtg={kategori.gambarKtg}
-                    />
+                    <div className=" u-repeater-1">
+                      <Kategori
+                        jenisKtg={kategori.jenisKtg}
+                        gambarKtg={kategori.gambarKtg}
+                      />
+                    </div>
                   </div>
                 )
                 )

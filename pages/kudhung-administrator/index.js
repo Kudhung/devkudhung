@@ -34,7 +34,7 @@ const FormKategoriProduk = (props) => {
         </div>
       </div>
 
-      <div className="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form u-white" style={{ padding: "10px" }}>
+      <div className="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form u-white" style={{ padding: "15px 10px 10px 10px" }}>
         <div className="u-form-group u-form-name space">
           <input
             {...register('jenisKtg', { required: true })}
