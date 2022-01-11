@@ -13,8 +13,8 @@ const About = ({ daftarSlider }) => {
     return (
         <>
             <link rel="stylesheet" href="/css/Tentang-Kami.css" media="screen" />
-            <Script src="/js/nicepage.js" ></Script>
             <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></Script>
+            <Script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></Script>
             <LayoutSlider
                 childrenSlider=
                 {daftarSlider.map((slider) => (
