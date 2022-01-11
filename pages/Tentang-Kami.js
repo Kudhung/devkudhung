@@ -43,7 +43,7 @@ const About = ({daftarSlider}) => {
                                     </div>
                                     <div className="u-align-center u-container-style u-layout-cell u-size-38 u-layout-cell-2">
                                         <div className="u-container-layout u-container-layout-2">
-                                            <p className="u-custom-font u-font-lato u-text u-text-2">Merupakan sebuah StartUp yang bergerak dibidang Hijab Fashion. Kami menyediakan berbagai jenis hijab sesuai dengan kebutuhan wanita muslimah dan memberikan pelayanan serta pelayanan yang baik dan cepat​&nbsp;</p>
+                                            <p className="u-custom-font u-font-lato u-text u-text-2">Merupakan sebuah StartUp yang bergerak dibidang Hijab Fashion. Kami menyediakan berbagai jenis hijab sesuai dengan kebutuhan wanita muslimah dan memberikan pelayanan serta pelayanan yang baik dan cepat;</p>
                                         </div>
                                     </div>
                                 </div>
