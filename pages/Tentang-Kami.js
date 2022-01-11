@@ -1,5 +1,6 @@
 import LayoutSlider from "../component/Main-Layout-Slider";
 import prisma from '../client.ts'
+import Script from 'next/script'
 
 export async function getServerSideProps(context) {
   const daftarSlider = await prisma.slider.findMany({
@@ -12,6 +13,8 @@ const About = ({daftarSlider}) => {
     return (
         <>
             <link rel="stylesheet" href="/css/Tentang-Kami.css" media="screen" />
+        <Script  src="/js/nicepage.js" ></Script>
+        <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></Script>
             <LayoutSlider
                 childrenSlider=
                 {daftarSlider.map((slider) => (
